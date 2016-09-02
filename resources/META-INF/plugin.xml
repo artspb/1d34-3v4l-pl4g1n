@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>me.artspb.idea.eval.plugin</id>
+  <name>3v4l pl4g1n</name>
+  <version>0.1</version>
+  <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
+
+  <description><![CDATA[
+      The plugin allows to evaluate a PHP code using <a href="https://3v4l.org/">3v4l.org</a>.
+      Read more about the website <a href="https://3v4l.org/about">here</a> and support its author if you like the idea.<br/>
+      Source code can be found on <a href="https://github.com/artspb/1d34-3v4l-pl4g1n">GitHub</a>.
+    ]]>
+  </description>
+
+  <change-notes><![CDATA[
+      <h3>0.1</h3>
+      <ul>
+          <li>Implemented a simple action to submit an execution request. 
+          Default web browser will be opened automatically.</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="145.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.jetbrains.php</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="EvalAction" class="me.artspb.idea.eval.plugin.EvalAction" text="3v4l();" description="3v4l();" icon="Icons.EVAL">
+      <keyboard-shortcut keymap="$default" first-keystroke="shift meta alt E"/>
+      <add-to-group group-id="EditorPopupMenu"/>
+      <add-to-group group-id="ProjectViewPopupMenu"/>
+      <add-to-group group-id="EditorTabPopupMenu"/>
+    </action>
+  </actions>
+
+</idea-plugin>
