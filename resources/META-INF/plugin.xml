@@ -6,8 +6,12 @@
 
   <description><![CDATA[
       The plugin allows to evaluate a PHP code using <a href="https://3v4l.org/">3v4l.org</a>.
-      Read more about the website <a href="https://3v4l.org/about">here</a> and support its author if you like the idea.<br/>
-      Source code can be found on <a href="https://github.com/artspb/1d34-3v4l-pl4g1n">GitHub</a>.
+      Read more about the website <a href="https://3v4l.org/about">here</a> and support its author if you like the idea.
+
+      <h3>Usage</h3>
+      To execute a PHP script you just have to right click on the file and select "3v4al();" from the menu. 
+      You could also use the keyboard command Ctrl + Alt + Shift + E (default). 
+      The plugin will open your browser with the result of the script on the 3v4l.org website.
     ]]>
   </description>
 
