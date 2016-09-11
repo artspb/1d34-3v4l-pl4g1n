@@ -5,11 +5,11 @@
   <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
 
   <description><![CDATA[
-      The plugin allows to evaluate a PHP code using <a href="https://3v4l.org/">3v4l.org</a>.
+      The plugin allows you to run your code on more than 150 different PHP versions using <a href="https://3v4l.org/">3v4l.org</a>.
       Read more about the website <a href="https://3v4l.org/about">here</a> and support its author if you like the idea.
 
       <h3>Usage</h3>
-      To execute a PHP script you just have to right click on the file and select "3v4al();" from the menu. 
+      To execute a PHP script you just have to right click on the file and select "3v4l();" from the menu. 
       You could also use the keyboard command Ctrl + Alt + Shift + E (default). 
       The plugin will open your browser with the result of the script on the 3v4l.org website.
     ]]>
