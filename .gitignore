@@ -1,6 +1,7 @@
 # IntelliJ IDEA
 .idea/workspace.xml
 .idea/tasks.xml
+out
 
 # Mac OS X
 .DS_Store
