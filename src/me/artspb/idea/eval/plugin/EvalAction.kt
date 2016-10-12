@@ -13,7 +13,7 @@ class EvalAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val file = e.dataContext.getData(CommonDataKeys.VIRTUAL_FILE)
         if (file != null) {
-            val content = file.contentsToByteArray()
+            val content = getContentFromSelection(e) ?: file.contentsToByteArray()
             val post = HttpPost("https://3v4l.org/new")
             post.entity = UrlEncodedFormEntity(listOf(
                     BasicNameValuePair("title", file.name),
@@ -25,5 +25,10 @@ class EvalAction : AnAction() {
                 BrowserUtil.browse("https://3v4l.org${location.value}")
             }
         }
+    }
+
+    private fun getContentFromSelection(e: AnActionEvent): ByteArray? {
+        val editor = e.dataContext.getData(CommonDataKeys.EDITOR)
+        return editor?.selectionModel?.selectedText?.toByteArray()
     }
 }

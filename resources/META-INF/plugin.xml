@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>me.artspb.idea.eval.plugin</id>
   <name>3v4l pl4g1n</name>
-  <version>0.1</version>
+  <version>0.2</version>
   <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
 
   <description><![CDATA[
@@ -16,6 +16,10 @@
   </description>
 
   <change-notes><![CDATA[
+      <h3>0.2</h3>
+      <ul>
+          <li>Added ability to submit a selected code fragment instead of the whole file.</li>
+      </ul>
       <h3>0.1</h3>
       <ul>
           <li>Implemented a simple action to submit an execution request. 
