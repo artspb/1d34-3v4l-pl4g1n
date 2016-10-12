@@ -4,7 +4,6 @@ import com.intellij.ide.BrowserUtil
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.vfs.VirtualFile
 import org.apache.http.client.entity.UrlEncodedFormEntity
 import org.apache.http.client.methods.HttpPost
 import org.apache.http.impl.client.HttpClients
@@ -26,27 +25,5 @@ class EvalAction : AnAction() {
                 BrowserUtil.browse("https://3v4l.org${location.value}")
             }
         }
-    }
-
-    private fun getContent(e: AnActionEvent, file: VirtualFile): ByteArray {
-        val rawContent = getContentFromSelection(e) ?: file.contentsToByteArray()
-        return if (rawContent.startsWith("<?php".toByteArray())) rawContent else "<?php\n\n".toByteArray() + rawContent
-    }
-
-    private fun getContentFromSelection(e: AnActionEvent): ByteArray? {
-        val editor = e.dataContext.getData(CommonDataKeys.EDITOR)
-        return editor?.selectionModel?.selectedText?.toByteArray()
-    }
-
-    private fun ByteArray.startsWith(arr: ByteArray): Boolean {
-        if (arr.size > this.size) {
-            return false
-        }
-        for (i in arr.indices) {
-            if (this[i] != arr[i]) {
-                return false
-            }
-        }
-        return true
     }
 }
