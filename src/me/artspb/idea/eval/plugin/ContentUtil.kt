@@ -4,31 +4,18 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.vfs.VirtualFile
 
-val PHP_OPENING_TAG_BYTES = "<?php".toByteArray()
-val LINE_SEPARATORS_BYTES = "\n\n".toByteArray()
+val PHP_OPENING_TAG = "<?php"
 
-fun getContent(e: AnActionEvent, file: VirtualFile): ByteArray {
-    val rawContent = getContentFromSelection(e) ?: file.contentsToByteArray()
-    return if (rawContent.startsWith(PHP_OPENING_TAG_BYTES)) {
-        rawContent
-    } else {
-        PHP_OPENING_TAG_BYTES + LINE_SEPARATORS_BYTES + rawContent
-    }
-}
-
-fun getContentFromSelection(e: AnActionEvent): ByteArray? {
+fun getContent(e: AnActionEvent, file: VirtualFile): String {
     val editor = e.dataContext.getData(CommonDataKeys.EDITOR)
-    return editor?.selectionModel?.selectedText?.toByteArray()
-}
-
-fun ByteArray.startsWith(arr: ByteArray): Boolean {
-    if (arr.size > this.size) {
-        return false
-    }
-    for (i in arr.indices) {
-        if (this[i] != arr[i]) {
-            return false
+    if (editor != null) {
+        val content = editor.selectionModel.selectedText ?: editor.document.text
+        return if (content.startsWith(PHP_OPENING_TAG)) {
+            content
+        } else {
+            PHP_OPENING_TAG + "\n\n" + content
         }
+    } else {
+        return String(file.contentsToByteArray())
     }
-    return true
 }

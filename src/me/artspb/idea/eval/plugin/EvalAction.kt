@@ -17,7 +17,7 @@ class EvalAction : AnAction() {
             val post = HttpPost("https://3v4l.org/new")
             post.entity = UrlEncodedFormEntity(listOf(
                     BasicNameValuePair("title", file.name),
-                    BasicNameValuePair("code", String(content))
+                    BasicNameValuePair("code", content)
             ))
             val response = HttpClients.createDefault().execute(post)
             val location = response.getFirstHeader("location")

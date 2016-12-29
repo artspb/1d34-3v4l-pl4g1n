@@ -1,7 +1,7 @@
-<idea-plugin version="2">
+<idea-plugin>
   <id>me.artspb.idea.eval.plugin</id>
   <name>3v4l pl4g1n</name>
-  <version>0.2</version>
+  <version>0.3</version>
   <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
 
   <description><![CDATA[
@@ -16,6 +16,10 @@
   </description>
 
   <change-notes><![CDATA[
+      <h3>0.3</h3>
+      <ul>
+          <li>Fixed bug: actual editor's content is used instead of file's (can be outdated).</li>
+      </ul>
       <h3>0.2</h3>
       <ul>
           <li>Added ability to submit a selected code fragment instead of the whole file.</li>
