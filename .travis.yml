@@ -1,0 +1,10 @@
+language: java
+jdk: oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: nEdq1ODbHopArbFSHDV4q5nlHNeXZVIIRPiGj44D7xPro/K/R8bnQ4eJjZ1ziLkZpsfFlF2s7LlXHj2wQruNkgyEuNck5aQNjs96LFX04AuDQrsZ2PKm8zcZraxYbrYzBEZ7B7R6wsCOPTE7xwvsJ844PyM7OGnNohWwxsPkEOpIziaDuxso2VqLPkxcCW1sviCPIZYWHeYdu6KCZMkE3pw9CwxO+W4X9eUrGSukvan9IHv1a2Zjyf78IDMDMBHzUEbiyUm+T6g0V0xWjEP8fP6rKkiI7Zu4fqgzjxALjt2VjL9MDtGpNJ+NJW4Ffv8NIq/OOd3me+8up/VHmtU8bLb+HaSzHt6rAhATDlevqpleYzTNjZ3X1FiBxuENMsArLIPbcoBGDzm3rYu/aXbHzu6xSAkAA5gXk6V2w79ow8Yre0zFbnRclUoJAgvuuEoaEvULeURg+mJyBtllD8pQT3eeFcHyFdTKLDZZbxZvTdi6eNTGX391u9NZ+tGVUuOB6AqWXlQO4PAs6UhXcEq1YJGCaO7MJmzMGZBWjWvntbfmc8SwvxYR7g+aPl7HI7FWxrgFQGSKRjZXPzMcS/D20hdX5d+X5+sPpxCDtOTo04NZH88kuHwltaiCoYaDsZhJpDdrmpCkYPat34mV0v0qQhzC9d4RNGP/lPImoJWdQtk=
+  file: build/distributions/1d34-3v4l-pl4g1n-$TRAVIS_TAG.zip
+  skip_cleanup: true
+  on:
+    tags: true

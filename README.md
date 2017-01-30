@@ -1,5 +1,6 @@
 # 1d34-3v4l-pl4g1n
 
+[![Build Status](https://travis-ci.org/artspb/1d34-3v4l-pl4g1n.svg?branch=master)](https://travis-ci.org/artspb/1d34-3v4l-pl4g1n)
 [![Version](http://phpstorm.espend.de/badge/8598/version)](https://plugins.jetbrains.com/plugin/8598)
 [![Downloads](http://phpstorm.espend.de/badge/8598/downloads)](https://plugins.jetbrains.com/plugin/8598)
 [![Downloads last month](http://phpstorm.espend.de/badge/8598/last-month)](https://plugins.jetbrains.com/plugin/8598)
