@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.2.0'
+    id 'com.zoltu.kotlin' version '1.0.6'
+}
+
+group 'me.artspb.idea'
+version '0.3'
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version 'IU-163.11103.6'
+    plugins 'com.jetbrains.php:163.10504.2'
+    pluginName '1d34-3v4l-pl4g1n'
+    updateSinceUntilBuild false
+
+    publish {
+        username "$System.env.JB_USERNAME"
+        password "$System.env.JB_PASSWORD"
+    }
+}
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:1.0.6"
+}
+
+if (System.env.TRAVIS_TAG) {
+    assemble.dependsOn publishPlugin
+}
