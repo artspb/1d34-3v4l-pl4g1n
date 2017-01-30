@@ -13,7 +13,6 @@ repositories {
 intellij {
     version 'IC-163.11103.6'
     plugins 'com.jetbrains.php:163.10504.2'
-    pluginName '1d34-3v4l-pl4g1n'
     updateSinceUntilBuild false
 
     publish {
