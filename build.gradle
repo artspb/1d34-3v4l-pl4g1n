@@ -20,11 +20,11 @@ intellij {
     version 'IU-171.4694.23'
     plugins 'com.jetbrains.php:171.4424.11'
     updateSinceUntilBuild false
+}
 
-    publish {
-        username "$System.env.JB_USERNAME"
-        password "$System.env.JB_PASSWORD"
-    }
+publishPlugin {
+    username "$System.env.JB_USERNAME"
+    password "$System.env.JB_PASSWORD"
 }
 
 dependencies {
