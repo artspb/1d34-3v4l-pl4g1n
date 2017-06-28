@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.artspb.idea.eval.plugin</id>
   <name>3v4l pl4g1n</name>
-  <version>0.3</version>
+  <version>0.4</version>
   <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
 
   <description><![CDATA[
@@ -16,6 +16,11 @@
   </description>
 
   <change-notes><![CDATA[
+      <h3>0.4</h3>
+      <ul>
+          <li>The action now works in a dumb mode.</li>
+          <li>The POST request is updated according to the latest 3v4l.org API changes.</li>
+      </ul>
       <h3>0.3</h3>
       <ul>
           <li>Fixed bug: actual editor's content is used instead of file's (can be outdated).</li>
