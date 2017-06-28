@@ -23,7 +23,14 @@ class EvalAction : AnAction(), DumbAware {
             val response = HttpClients.createDefault().execute(post)
             val location = response.getFirstHeader("location")
             if (location != null) {
-                BrowserUtil.browse("https://3v4l.org${location.value}")
+                val value = location.value
+                val url: String
+                if (value.startsWith("https://")) {
+                    url = value
+                } else {
+                    url = "https://3v4l.org$value"
+                }
+                BrowserUtil.browse(url)
             }
         }
     }
